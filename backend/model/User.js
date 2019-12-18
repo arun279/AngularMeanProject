@@ -9,17 +9,8 @@ let User = new Schema({
   user_email: {
     type: String
   },
-  section: {
-    type: String
-  },
-  subjects: {
-    type: Array
-  },
-  gender: {
-    type: String
-  },
-  dob: {
-    type: Date
+  phone: {
+    type: Number
   }
 }, {
   collection: 'users'
