@@ -1,5 +1,6 @@
 import { Component, ViewChild, HostListener, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { LogindataService } from './logindata.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { MatSidenav } from '@angular/material/sidenav';
 
 export class AppComponent {
   opened = true;
+  loggedIn: Boolean;
   @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
   ngOnInit() {
+    this.isLoggedIn();
     console.log(window.innerWidth)
     if (window.innerWidth < 768) {
       this.sidenav.fixedTopGap = 55;
@@ -40,5 +43,11 @@ export class AppComponent {
     } else {
       return false;
     }
+  }
+
+  constructor(private logindataService: LogindataService) {}
+
+  isLoggedIn() {
+    this.logindataService.getLoggedIn().subscribe(loggedIn => this.loggedIn = loggedIn);
   }
 }

@@ -10,7 +10,7 @@
   <!-- Sidenav -->
   <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
     [fixedTopGap]>
-    <mat-nav-list *ngIf="loggedIn">
+    <mat-nav-list>
       <a mat-list-item routerLinkActive="active" routerLink="/add-user">
         <mat-icon>add</mat-icon> Add User
       </a>
@@ -22,7 +22,6 @@
 
   <!-- Main content -->
   <mat-sidenav-content>
-    <!-- <app-login [loggedIn]="loggedIn"></app-login> -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

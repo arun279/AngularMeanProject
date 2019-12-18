@@ -16,7 +16,7 @@
           <mat-form-field class="example-full-width">
             <input matInput placeholder="User name" formControlName="user_name">
             <mat-error *ngIf="handleError('user_name', 'required')">
-              You must provide a<strong>user name</strong>
+              You must provide a <strong>user name</strong>
             </mat-error>
           </mat-form-field>
   
@@ -24,7 +24,7 @@
           <mat-form-field class="example-full-width">
             <input matInput placeholder="User email" formControlName="user_email">
             <mat-error *ngIf="handleError('user_email', 'required')">
-              You must provide a<strong>user email</strong>
+              You must provide a <strong>user email</strong>
             </mat-error>
           </mat-form-field>
 
@@ -32,19 +32,26 @@
           <mat-form-field class="example-full-width">
             <input matInput placeholder="User phone" formControlName="phone">
             <mat-error *ngIf="handleError('phone', 'required')">
-              You must provide a<strong>phone number</strong>
+              You must provide a <strong>phone number</strong>
             </mat-error>
           </mat-form-field>
         </div>
-      </mat-card>
-  
-      <!-- Submit & Reset -->
-      <mat-card>
+
+        <!-- Submit & Reset -->
         <div class="full-wrapper button-wrapper">
           <div class="button-wrapper">
             <button mat-flat-button color="warn">Submit</button>
           </div>
         </div>
       </mat-card>
+      
+      <!-- Submit & Reset -->
+      <!-- <mat-card>
+        <div class="full-wrapper button-wrapper">
+          <div class="button-wrapper">
+            <button mat-flat-button color="warn">Submit</button>
+          </div>
+        </div>
+      </mat-card> -->
     </form>
   </div>
