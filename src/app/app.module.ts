@@ -9,6 +9,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular material
 import { AngularMaterialModule } from './material.module';
+/* Angular 8 http service */
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AngularMaterialModule } from './material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
